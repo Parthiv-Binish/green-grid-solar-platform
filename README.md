@@ -1,14 +1,22 @@
 # Green Grid Solar Solutions — Product & Platform Documentation
 
-> Central documentation repository for the discovery, design, specification and future implementation of the Green Grid Solar Solutions digital platform.
+ > Product, design, engineering and implementation repository for the Green Grid Solar Solutions digital platform.
 
-**Status:** Discovery / planning  
+**Status:** React JavaScript website foundation started; connected platform delivered in phases  
 **Documentation version:** 0.2.0  
 **Last updated:** 2026-11-16
 
 ## Purpose
 
-This repository defines business requirements, customer journeys, user experience, catalogue, workflows, scalable data design, customer portal, staff operations, integrations, security and phased delivery.
+This repository contains the product requirements, design system, visual assets register, React JavaScript website, platform architecture, workflows, database design, customer portal, staff operations, integrations, security and phased delivery.
+
+## Website development
+
+The initial React + Vite JavaScript application is in the repository root. Run `npm install` then `npm run dev`. Build with `npm run build`. See [React application architecture](docs/14-implementation/react-application-architecture.md) and [website foundation status](docs/14-implementation/website-foundation-status.md). The current implementation includes the public home, solutions, about and contact pages. Enquiry submission is not yet connected to a backend and does not claim to send data.
+
+## Visual asset library
+
+See [asset inventory](public/assets/ASSET-INVENTORY.md), [official logo and asset sources](public/assets/OFFICIAL-LOGO-ASSET-SOURCES.md), and [asset usage policy](public/assets/USAGE-POLICY.md). Generated solar scenes are illustrative brand imagery, not verified project evidence.
 
 ## Product vision
 
