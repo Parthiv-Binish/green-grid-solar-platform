@@ -88,3 +88,31 @@ For every third-party logo/photo saved locally, record:
 ## G. Verified official media-page example
 - Vikram Solar Media Resources provides logo and logo usage guidelines, spokesperson photos, product photos, and project-site/manufacturing photos: https://www.vikramsolar.com/media-resources/
 - MNRE official portal publishes PM Surya Ghar programme material: https://mnre.gov.in/offerings and https://pmsuryaghar.gov.in/. Programme material is not permission to represent Green Grid as an approved vendor.
+
+
+## H. Verified media and scheme-logo guidance (research update: 16 November 2026)
+
+The following official pages were checked during this implementation update:
+
+| Source | Official asset information found | Use in Green Grid |
+|---|---|---|
+| MNRE — Our Portals | The MNRE portal lists the PM Surya Ghar portal among its official programme portals: https://mnre.gov.in/ministry/our-performance | Link to programme information; do not imply endorsement |
+| PM Surya Ghar National Portal | https://pmsuryaghar.gov.in/ | An MNRE office memorandum dated 30 July 2026 states that the programme logo is downloaded through the portal's **Vendor** menu, **Download PMSG: MBY Logo**. This is not permission for a non-vendor to use it as a badge. |
+| ANERT | https://anert.gov.in/ and https://anert.gov.in/about | Official Kerala renewable-energy agency site; use as a source link, not an endorsement badge |
+| Vikram Solar Media Resources | https://www.vikramsolar.com/media-resources/ | Dedicated media page lists logo usage guidelines, product photos, spokesperson photos and project-site/manufacturing photos. Follow its terms and request permission where required. |
+| Saatvik Green Energy Media Kit | https://www.saatvikgroup.com/newsroom/media-kit | Dedicated media kit includes logo variants, brand colours, typography and logo clear-space guidance. Use only within its stated terms. |
+| Solex Energy Press Kit | https://solex.in/press-kit/ | Press kit includes corporate/product materials and datasheets; confirm reuse permission for each file. |
+
+### Programme logo warning
+
+MNRE's 30 July 2026 office memorandum on PM Surya Ghar branding directs registered vendors/manufacturers to download the scheme logo from the National Portal. The logo must not be used to suggest that Green Grid is a registered vendor, approved installer, government partner or subsidy-guaranteed provider unless its current status is independently verified and the exact branding rules are satisfied.
+
+### Official sources checked
+- MNRE portal listing: https://mnre.gov.in/ministry/our-performance
+- PM Surya Ghar National Portal: https://pmsuryaghar.gov.in/
+- ANERT official site: https://anert.gov.in/
+- Vikram Solar media resources: https://www.vikramsolar.com/media-resources/
+- Saatvik media kit: https://www.saatvikgroup.com/newsroom/media-kit
+- Solex press kit: https://solex.in/press-kit/
+
+These checks establish the existence of official source pages, not blanket rights to download, modify or republish marks. The owner must approve each downloaded asset and its intended placement.
