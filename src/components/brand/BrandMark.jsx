@@ -1,0 +1,2 @@
+import { Sun } from 'lucide-react';
+export default function BrandMark({compact=false}){return <span className="brand-lockup" aria-label="Green Grid Solar Solutions"><span className="brand-symbol" aria-hidden="true"><Sun size={compact?22:27} strokeWidth={1.8}/></span><span className="brand-wordmark"><strong>GREEN GRID</strong><small>SOLAR SOLUTIONS</small></span></span>;}
