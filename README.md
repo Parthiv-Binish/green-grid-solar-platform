@@ -41,6 +41,7 @@ Build a trustworthy, mobile-first solar platform that helps customers understand
 | **Detailed workflows** | [End-to-end workflow specification](docs/10-workflows/end-to-end-workflow.md) |
 | **Scalable database design** | [Scalable database design](docs/11-database/scalable-database-design.md) |
 | **Master data and UI rules** | [Master data and UI implementation rules](docs/12-product-rules/master-data-and-ui-rules.md) |
+| **Inclusive design research** | [Inclusive UX and visual design research](docs/13-design-research/inclusive-ux-and-visual-design-research.md) |
 | Open questions | [Open questions](docs/09-governance/open-questions.md) |
 | Decisions | [Decision log](docs/09-governance/decision-log.md) |
 | Research | [Research register](docs/09-governance/research-register.md) |

@@ -85,3 +85,10 @@ Prioritise actual Green Grid installations, team, products and service locations
 ## 9. Accessibility and responsive quality
 
 Target WCAG 2.2 AA: keyboard access, visible focus, semantic headings and landmarks, accessible labels and errors, sufficient contrast, non-colour status cues, accessible dialogs/menus/tables, meaningful image alt text and captions/transcripts. Test narrow mobile, large mobile, tablet, laptop and wide desktop layouts using real content lengths.
+
+
+## 10. Inclusive design research specification
+
+The detailed evidence-backed specification is maintained in [Inclusive UX and Visual Design Research](../13-design-research/inclusive-ux-and-visual-design-research.md). It governs logo usage, photography placement, icons, text hierarchy, layout, cards, forms, buttons, tables, navigation, accessibility and user testing. Treat it as part of this design system, not optional inspiration.
+
+Key requirements: design for varied ages and abilities without stereotyping; explain solar terminology in plain language; use real approved imagery only; pair unfamiliar icons with text; keep controls comfortably large; preserve form values after errors; distinguish customer education from staff operations; and validate with real users before sign-off.
