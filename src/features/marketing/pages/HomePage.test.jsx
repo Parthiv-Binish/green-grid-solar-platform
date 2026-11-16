@@ -1,7 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { MemoryRouter } from 'react-router-dom';
-import React from 'react';
 import HomePage from './HomePage.jsx';
 
 describe('HomePage', () => {
