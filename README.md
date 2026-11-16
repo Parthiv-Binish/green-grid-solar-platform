@@ -1,18 +1,16 @@
 # Green Grid Solar Solutions — Product & Platform Documentation
 
- > Product, design, engineering and implementation repository for the Green Grid Solar Solutions digital platform.
+> Product, design, engineering and implementation repository for the Green Grid Solar Solutions digital platform.
 
-**Status:** React JavaScript website foundation started; connected platform delivered in phases  
-**Documentation version:** 0.2.0  
+**Status:** Active React JavaScript platform foundation; connected business workflows are being delivered incrementally  
+**Documentation version:** 0.3.0  
 **Last updated:** 2026-11-16
-
-## Purpose
-
-This repository contains the product requirements, design system, visual assets register, React JavaScript website, platform architecture, workflows, database design, customer portal, staff operations, integrations, security and phased delivery.
 
 ## Website development
 
-The initial React + Vite JavaScript application is in the repository root. Run `npm install` then `npm run dev`. Build with `npm run build`. See [React application architecture](docs/14-implementation/react-application-architecture.md) and [website foundation status](docs/14-implementation/website-foundation-status.md). The current implementation includes the public home, solutions, products, about and contact pages. The products page displays only published catalogue records; until the catalogue integration is configured, it shows an honest empty state. Enquiry submission is not yet connected to a backend and does not claim to send data.
+The React + Vite JavaScript application is in the repository root. Run `npm install`, `npm run dev`, `npm test`, `npm run lint` and `npm run build`. Public routes include Home, Solutions, Products, Solar calculator, About and Contact. Product catalogue content remains empty until administrators publish verified product records. The contact form validates input but does not send or store enquiries until a trusted backend endpoint is configured.
+
+The solar calculator is an educational estimate driven by visitor-entered assumptions. It is not an engineering design, quotation or savings promise. See [solar estimator](docs/14-implementation/solar-estimator.md), [React application architecture](docs/14-implementation/react-application-architecture.md) and [website foundation status](docs/14-implementation/website-foundation-status.md).
 
 ## Visual asset library
 
@@ -50,13 +48,14 @@ Build a trustworthy, mobile-first solar platform that helps customers understand
 | **Scalable database design** | [Scalable database design](docs/11-database/scalable-database-design.md) |
 | **Master data and UI rules** | [Master data and UI implementation rules](docs/12-product-rules/master-data-and-ui-rules.md) |
 | **Inclusive design research** | [Inclusive UX and visual design research](docs/13-design-research/inclusive-ux-and-visual-design-research.md) |
+| Solar estimator | [Estimator model and limitations](docs/14-implementation/solar-estimator.md) |
 | Open questions | [Open questions](docs/09-governance/open-questions.md) |
 | Decisions | [Decision log](docs/09-governance/decision-log.md) |
 | Research | [Research register](docs/09-governance/research-register.md) |
 
 ## Important source and confidence rules
 
-Distinguish observed information, proposed design, unverified business facts and external requirements. Do not publish unverified prices, product models, certifications, vendor status, warranties, testimonials, installation statistics or subsidy promises.
+Distinguish observed information, proposed design, unverified business facts and external requirements. Do not publish unverified prices, product models, certifications, vendor status, warranties, testimonials, installation statistics or subsidy promises. Missing admin-managed content must remain honestly empty rather than populated with invented records.
 
 Known brochure and website price differences, contact-number differences, brand references and business address details must be verified with Green Grid before publication. Brand logos in a brochure do not prove current stock or authorised dealership.
 
@@ -69,6 +68,7 @@ Known brochure and website price differences, contact-number differences, brand 
 5. Customer data must be isolated with server-side authorization and RLS.
 6. Every pending status has an owner, reason and next action.
 7. Build incrementally with versioned migrations, acceptance tests and auditability.
+8. Never expose privileged keys in browser code or commit credentials.
 
 ## Contributing
 
