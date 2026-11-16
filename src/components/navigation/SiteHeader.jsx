@@ -5,6 +5,7 @@ import BrandMark from '../brand/BrandMark.jsx';
 
 const links = [
   { to: '/solutions', label: 'Solutions' },
+  { to: '/calculator', label: 'Solar calculator' },
   { to: '/products', label: 'Products' },
   { to: '/about', label: 'About us' },
   { to: '/contact', label: 'Contact' }
