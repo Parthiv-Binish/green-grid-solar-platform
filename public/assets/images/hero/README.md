@@ -1,5 +1,7 @@
 # Hero image placement
 
-Expected production path: `/assets/images/hero/residential-solar-kerala.webp`.
+Committed asset: `residential-solar-illustrative.svg`.
 
-The homepage hero image is an illustrative generated scene. It is not a completed Green Grid installation. Keep this note with the asset and retain the same disclosure in any content-management record. Replace the file with a compressed WebP/AVIF derivative of the approved generated master when the binary is added to this repository.
+This is original illustrative artwork created for the Green Grid website. It depicts a fictional Kerala-style residence and solar array; it is not a photograph of a Green Grid customer, employee, completed project or verified installation.
+
+The image may be used as a general hero visual. Do not describe it as a case study or project photograph. Additional generated photorealistic image masters are being prepared for optimisation and repository upload.
