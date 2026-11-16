@@ -297,3 +297,20 @@ Define retention by data category and legal basis. Customer deletion requests re
 13. Notifications, outbox, integrations and audit hardening.
 
 Do not create all tables before validating the workflows. Implement module-by-module migrations, RLS policies, constraints and tests.
+
+## 15. Master data: configuration tables, not frontend constants
+
+Business-managed values are stored in organisation-scoped tables (or explicitly global reference tables with controlled governance) and maintained through admin pages. The frontend queries these records; it must not embed duplicate arrays or use fallback sample payloads.
+
+Configuration domains include service types and coverage; lead sources, priorities and loss reasons; customer/property classifications; product categories, brands, products, specifications, documents and effective-dated prices; suppliers; inventory locations and reorder policies; tax configurations, quote terms, payment milestone templates and approval thresholds; project stage/task/checklist templates; support categories and warranty definitions; notification templates; tariff schedules, solar assumptions and calculation model versions.
+
+- Internal state-machine enums and permission keys remain controlled in code/migrations.
+- Business configuration uses organisation scope, active status, effective dates and audit history where changes affect transactions.
+- Use immutable snapshots on issued quotations, accepted agreements, approved designs, payment records and completed project evidence.
+- Deactivation is preferred over deletion when referenced; enforce foreign keys and show dependency warnings.
+- Migrations create schema, constraints, functions and policies only. Do not insert sample master records.
+- Tests may generate isolated fixtures, but deployed applications never load test fixtures.
+- Missing configuration blocks the affected workflow and displays a setup action; never invent prices, tax, tariff, service area, product or appointment slots.
+- Audit material changes to prices, taxes, tariffs, warranty terms, compatibility evidence, service coverage and approval policies.
+
+See [Master Data and UI Implementation Rules](../12-product-rules/master-data-and-ui-rules.md).

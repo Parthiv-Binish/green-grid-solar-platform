@@ -255,3 +255,45 @@ All mutation buttons: disable during submit; use idempotency keys where relevant
 ## 18. Acceptance test baseline
 
 For every button test: permitted user; forbidden user; missing required field; invalid value; duplicate click; concurrent update; network failure; server failure; stale status; successful transition; audit entry; notification queued; notification failure; customer-visible status. Verify that failed actions leave the record in its prior valid state.
+
+## 15. Master data governance — admin-managed, never hardcoded
+
+This is mandatory for every environment, including local development, staging and production.
+
+### Source-of-truth rules
+- Do not ship mock, demo, sample or fabricated business records in migrations, seed files, frontend constants, API fallbacks or production deployments.
+- Do not hardcode operational master values in components, forms, filters, calculators, validation rules or backend logic when administrators may change them.
+- Admins create, edit, activate, deactivate and archive master data through dedicated permission-controlled pages.
+- Screens, dropdowns, filters, reports and workflows load applicable values from the database through authorised APIs.
+- A missing master record is a real configuration gap. Show an honest empty state; never substitute a made-up default.
+
+### Admin-managed master pages
+Provide searchable, filterable, paginated management pages for organisation settings and branches; service types and service coverage; lead sources, priorities and loss reasons; customer/property classifications; product categories, brands, products, specifications, documents and price records; suppliers; inventory locations and stock policies; tax configuration, quote terms, payment milestones and approval thresholds; project stage/task/checklist templates; support and warranty categories; notification templates; calculator assumptions and tariff schedules.
+
+Internal state-machine values, permission keys and security-critical enums remain controlled system definitions. Clearly document which values are system-controlled and which are admin-managed.
+
+### Lifecycle and validation
+- Use Draft/Inactive before approval where appropriate; only active and approved records appear in operational selection lists.
+- Enforce required fields, uniqueness, valid ranges, effective dates, dependencies and organisation scope server-side and in the database.
+- Deactivation prevents new use but preserves historical transactions and snapshots.
+- Referenced master records cannot be physically deleted through normal UI.
+- Version and audit changes to price, tax, tariff, warranty, product specifications, service coverage and approval thresholds.
+- Record actor, timestamp, before/after values and reason for material changes.
+- Warn about dependencies before deactivation.
+- Bulk imports require preview, row-level validation, explicit confirmation and an import report.
+
+### Missing-data behaviour
+- No products: show an empty catalogue state and link authorised admins to Product Management.
+- No service coverage: block booking confirmation; do not assume all locations are serviceable.
+- No tariff/assumptions: require a valid configured source or clearly identified manual assumption; never invent savings.
+- No staff availability: show no eligible slots.
+- No price, tax or payment terms: prevent quotation issue.
+- No checklist/template: block the step that depends on it.
+- API failure: show retry/error state; never fall back to embedded sample JSON.
+
+### Development and acceptance
+- Tests may generate synthetic records only in isolated test databases or rollback contexts.
+- A fresh installation contains schema, permissions and required system configuration only—not fictional customers, products, leads, prices or projects.
+- Provide a first-run setup checklist.
+- CI should detect prohibited production seed files, hardcoded master arrays and demo fallbacks.
+- Acceptance: an admin-created record becomes available in its operational form without code change; deactivation removes it from new selections but preserves history; direct API calls by non-admins are rejected; every change is auditable.

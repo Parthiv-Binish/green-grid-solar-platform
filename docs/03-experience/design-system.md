@@ -1,88 +1,87 @@
-# Design System
+# Design System and Product UI Rules
 
 ## 1. Design direction
 
-**Direction:** Premium, modern, engineering-led sustainability.
+**Direction:** Premium, modern, engineering-led sustainability with a credible enterprise operations interface.
 
-Avoid generic solar templates dominated by stock imagery, repeated green cards and vague claims. The interface should communicate technical competence, reliability, clarity and local service.
+The product must feel like software used daily by a real solar EPC / installation business—not a generic AI dashboard, landing-page template or visual concept. Prioritise task completion, operational clarity, accurate information and predictable behaviour over decoration.
 
-## 2. Proposed colour tokens
+Avoid generic AI patterns: oversized gradient panels inside admin screens, repeated rounded cards for every metric, excessive glassmorphism, decorative charts without decisions behind them, random icon tiles, unnecessary empty whitespace, fake activity feeds, fake metrics, stock-photo filler and animations that delay work.
 
-These are proposed design tokens, not an existing approved brand standard.
+## 2. Real operational UI principles
+
+- Design each page around the user's job, the records they need and the next action they can take.
+- Use clear page headers with title, context, primary action and relevant secondary actions.
+- Use tables or structured lists when comparison, scanning, sorting, filtering, bulk selection or quick action matters. Do not turn every row into a card.
+- Detail pages show summary, status, owner, key facts, related records, activity timeline and permitted actions.
+- Keep navigation predictable and grouped by real work: CRM, Scheduling, Surveys, Design, Quotations, Projects, Procurement, Inventory, Accounts, Support, Catalogue and Administration.
+- Use compact, consistent density for staff workspaces; use more spacious layouts for public/customer journeys.
+- Show status, assignee, due date, age, priority and blockers where they drive action.
+- Pending queues show owner, reason, next action and due date.
+- Charts must use live data and answer an operational question. Include date range, units, filters and honest empty states.
+- Metrics need clear definitions and drill-through to underlying records.
+
+## 3. Master data and data presentation
+
+- No mock, demo, sample or fabricated business data in any delivered environment.
+- No hardcoded product lists, brands, suppliers, service areas, tax rates, tariffs, prices, payment terms, lead sources or other admin-managed values.
+- Admin-managed values come from database-backed management pages and authorised APIs.
+- Empty states explain what is missing and offer the correct authorised setup action. Never fill a blank table with examples or fabricated chart values.
+- Loading, no-results, no-permission, stale-data and service-error states are distinct.
+- Preserve historical snapshots for issued quotations, approved designs, completed work and financial transactions.
+
+See [Master Data and UI Implementation Rules](../12-product-rules/master-data-and-ui-rules.md).
+
+## 4. Proposed visual tokens
+
+These are proposed tokens, not an approved existing brand standard. Confirm final brand colours and typography with Green Grid before public launch.
 
 | Token | Hex | Use |
 |---|---|---|
 | Forest | `#102C24` | Primary brand, navigation, dark surfaces |
-| Solar lime | `#D8F36A` | Primary CTA and highlights |
+| Solar lime | `#D8F36A` | Primary CTA and restrained highlights |
 | Warm white | `#F4F5EC` | Main light background |
 | Sage | `#A6B9AC` | Secondary surfaces and muted accents |
 | Energy amber | `#E5A34B` | Attention / energy accent |
 | Charcoal | `#202824` | Main text |
-| White | `#FFFFFF` | Cards and contrast surfaces |
+| White | `#FFFFFF` | Content surfaces |
 | Error | `#B93838` | Errors |
 | Success | `#287A55` | Success states |
 
-Check contrast for every text/background pairing. Do not use colour alone to convey status.
+Use colour consistently and sparingly. Status must never be communicated by colour alone. Validate contrast for every pairing.
 
-## 3. Typography
+## 5. Typography and layout
 
-- Headings: Manrope (proposed).
-- Body and UI: Inter (proposed).
-- Use a clear type scale and comfortable line height.
-- Avoid all-caps body copy and overly condensed display text.
+- Headings: Manrope (proposed); body and UI: Inter (proposed).
+- Use a clear type scale, readable line length and comfortable line height.
+- Use consistent spacing, alignment grid, border treatment and radius system.
+- Avoid all-caps body text, excessive condensed typography and oversized display text in operational screens.
+- Use responsive layouts that preserve table usability, with intentional mobile alternatives.
+- Forms use logical sections, clear labels, helper text and explicit required/optional indicators.
 
-## 4. Layout
+## 6. Core component behaviour
 
-- Mobile-first responsive grid.
-- Consistent spacing scale.
-- Strong content hierarchy.
-- Wide editorial hero layouts balanced with real project photography.
-- Product specifications should be scannable.
-- Use tables for technical comparisons where appropriate.
-- Avoid excessive glassmorphism, neon effects and animation.
+- Buttons use clear verb-led labels; distinguish primary, secondary, destructive and text actions.
+- Tables use server-side pagination/filtering for large datasets; row actions enforce permissions.
+- Forms show field-level errors, preserve values after recoverable failures, prevent duplicate submission and reflect actual save state.
+- Status treatments show text labels, timestamps and transition history; never imply success before server confirmation.
+- Dialogs are for focused confirmation or short tasks, not substitutes for full create/edit pages.
+- Timelines show meaningful business events, actor and time—not fabricated activity.
+- File uploads show restrictions, progress, retry and access scope.
+- Notifications are actionable, deduplicated and linked to the relevant record.
 
-## 5. Components
+## 7. Interaction and motion
 
-- Header and responsive navigation.
-- Footer.
-- Primary / secondary / text buttons.
-- Form fields with labels, helper text and validation.
-- Product cards and specification tables.
-- Solution cards.
-- Calculator input and result panels.
-- Booking stepper.
-- Status badge with text label.
-- Timeline / project tracker.
-- Document list.
-- Support ticket card.
-- Testimonial block (verified only).
-- FAQ accordion.
-- Cookie / privacy preference interface if required.
-
-## 6. Interaction and motion
-
-- Subtle transitions for hover, focus and state changes.
+- Subtle transitions for hover, focus and state changes only.
 - Respect reduced-motion preferences.
-- No animation that hides important content or delays access.
-- Forms must preserve entered data after recoverable errors.
-- Provide loading, empty, success and error states.
+- Never hide content behind animation or delay access.
+- Actions show loading, success and failure feedback based on actual server responses.
+- Preserve form values after recoverable errors.
 
-## 7. Photography and assets
+## 8. Photography and assets
 
-Prioritise actual Green Grid installations, team, products and service locations after obtaining permission. Until then, use clearly licensed or properly sourced illustrative imagery. Do not present stock imagery as a Green Grid completed project.
+Prioritise actual Green Grid installations, team, products and service locations after obtaining permission. Until then, use properly licensed illustrative imagery and label it appropriately. Never present stock imagery as a Green Grid completed project. Product images and datasheets must come from verified catalogue records or approved asset sources.
 
-## 8. Responsive breakpoints
+## 9. Accessibility and responsive quality
 
-Use project-defined breakpoints based on content rather than device brand. Test narrow mobile, large mobile, tablet, laptop and wide desktop layouts.
-
-## 9. Accessibility
-
-Target WCAG 2.2 AA as the design objective:
-- Keyboard access.
-- Visible focus.
-- Semantic headings and landmarks.
-- Labels and error descriptions.
-- Contrast.
-- Accessible dialogs and menus.
-- Alternative text for meaningful images.
-- Captions / transcripts for meaningful video.
+Target WCAG 2.2 AA: keyboard access, visible focus, semantic headings and landmarks, accessible labels and errors, sufficient contrast, non-colour status cues, accessible dialogs/menus/tables, meaningful image alt text and captions/transcripts. Test narrow mobile, large mobile, tablet, laptop and wide desktop layouts using real content lengths.
