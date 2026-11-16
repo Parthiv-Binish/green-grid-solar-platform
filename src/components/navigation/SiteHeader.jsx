@@ -1,6 +1,29 @@
-import {useState} from 'react';
-import {Link,NavLink} from 'react-router-dom';
-import {Menu,X,ArrowUpRight} from 'lucide-react';
+import { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
 import BrandMark from '../brand/BrandMark.jsx';
-const links=[{to:'/solutions',label:'Solutions'},{to:'/about',label:'About us'},{to:'/contact',label:'Contact'}];
-export default function SiteHeader(){const[open,setOpen]=useState(false);return <header className="site-header"><div className="header-inner container"><Link to="/" className="brand-link" onClick={()=>setOpen(false)}><BrandMark/></Link><button className="mobile-menu-button" type="button" aria-label={open?'Close navigation':'Open navigation'} aria-expanded={open} onClick={()=>setOpen(!open)}>{open?<X/>:<Menu/>}</button><nav className={open?'main-nav is-open':'main-nav'} aria-label="Main navigation">{links.map(link=><NavLink key={link.to} to={link.to} onClick={()=>setOpen(false)}>{link.label}</NavLink>)}<Link className="button button-primary nav-cta" to="/contact" onClick={()=>setOpen(false)}>Request assessment <ArrowUpRight size={17}/></Link></nav></div></header>;}
+
+const links = [
+  { to: '/solutions', label: 'Solutions' },
+  { to: '/products', label: 'Products' },
+  { to: '/about', label: 'About us' },
+  { to: '/contact', label: 'Contact' }
+];
+
+export default function SiteHeader() {
+  const [open, setOpen] = useState(false);
+  return (
+    <header className="site-header">
+      <div className="header-inner container">
+        <Link to="/" className="brand-link" onClick={() => setOpen(false)}><BrandMark /></Link>
+        <button className="mobile-menu-button" type="button" aria-label={open ? 'Close navigation' : 'Open navigation'} aria-expanded={open} onClick={() => setOpen(!open)}>
+          {open ? <X /> : <Menu />}
+        </button>
+        <nav className={open ? 'main-nav is-open' : 'main-nav'} aria-label="Main navigation">
+          {links.map(link => <NavLink key={link.to} to={link.to} onClick={() => setOpen(false)}>{link.label}</NavLink>)}
+          <Link className="button button-primary nav-cta" to="/contact" onClick={() => setOpen(false)}>Request assessment <ArrowUpRight size={17} /></Link>
+        </nav>
+      </div>
+    </header>
+  );
+}
