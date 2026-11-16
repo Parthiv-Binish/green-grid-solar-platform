@@ -12,7 +12,7 @@ This repository contains the product requirements, design system, visual assets 
 
 ## Website development
 
-The initial React + Vite JavaScript application is in the repository root. Run `npm install` then `npm run dev`. Build with `npm run build`. See [React application architecture](docs/14-implementation/react-application-architecture.md) and [website foundation status](docs/14-implementation/website-foundation-status.md). The current implementation includes the public home, solutions, about and contact pages. Enquiry submission is not yet connected to a backend and does not claim to send data.
+The initial React + Vite JavaScript application is in the repository root. Run `npm install` then `npm run dev`. Build with `npm run build`. See [React application architecture](docs/14-implementation/react-application-architecture.md) and [website foundation status](docs/14-implementation/website-foundation-status.md). The current implementation includes the public home, solutions, products, about and contact pages. The products page displays only published catalogue records; until the catalogue integration is configured, it shows an honest empty state. Enquiry submission is not yet connected to a backend and does not claim to send data.
 
 ## Visual asset library
 
