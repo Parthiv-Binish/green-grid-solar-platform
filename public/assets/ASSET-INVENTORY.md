@@ -1,6 +1,6 @@
 # Green Grid — complete visual asset inventory
 
-Status: initial inventory; generated assets are explicitly marked illustrative. No Green Grid-owned brand asset is assumed to exist.
+Status: inventory committed to `main`. Original SVG solar icons and three educational system diagrams are now present. Photographic assets remain pending repository upload/approval. No Green Grid-owned brand asset is assumed to exist.
 
 ## 1. Brand identity
 | Asset | Required variants | Placement | Status |
@@ -30,7 +30,7 @@ Status: initial inventory; generated assets are explicitly marked illustrative. 
 | Location/office exterior | Contact page | Await actual location photo |
 
 ## 3. Solar education illustrations
-- On-grid system flow: panels → inverter → home/load → grid; clearly show grid outage behaviour.
+- **Created in repository:** `04-illustrations/solar-education/on-grid-system.svg`, `off-grid-system.svg`, `hybrid-system.svg` (technical review required before publication).\n- **Created in repository:** `02-icons/solar/solar-panel.svg`, `inverter.svg`, `battery.svg`, `grid-meter.svg`; `02-icons/workflow/site-survey.svg`; `02-icons/status/pending.svg`, `completed.svg`.\n- On-grid system flow: panels → inverter → home/load → grid; clearly show grid outage behaviour.
 - Off-grid system: panels → charge controller/inverter → battery → loads.
 - Hybrid system: panels + grid + battery + critical loads.
 - Net-metering import/export diagram (only after local utility rules are verified).
