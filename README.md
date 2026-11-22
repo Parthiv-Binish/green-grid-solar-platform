@@ -73,3 +73,8 @@ Known brochure and website price differences, contact-number differences, brand 
 ## Contributing
 
 Record unresolved facts in docs/09-governance/open-questions.md, decisions in docs/09-governance/decision-log.md and source verification in docs/09-governance/research-register.md. Keep requirements testable and avoid credentials or customer personal data in the repository.
+
+
+## GreenGrid enterprise platform specification
+
+The consolidated business, product, architecture and implementation package is maintained separately under [docs/15-platform-spec/](docs/15-platform-spec/README.md). It includes the project charter, BRD, enquiry-to-customer workflow, project/utility/service workflows, SRS, architecture, logical data model/API outline, group authorization and security, IoT monitoring, notifications, mobile apps, roadmap/cost assumptions and discovery/acceptance register.
